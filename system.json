@@ -1,0 +1,34 @@
+{
+  "id": "novatide",
+  "title": "Novatide",
+  "description": "The Novatide system for FoundryVTT!",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.308",
+    "maximum": "11"
+  },
+  "authors": [{
+    "name": "NoahJGersh",
+    "url": "https://noahger.sh",
+    "discord": "@kolastor"
+  }],
+  "esmodules": ["module/novatide.mjs"],
+  "styles": ["css/novatide.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
+}

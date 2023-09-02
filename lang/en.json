@@ -1,0 +1,17 @@
+{
+  "NOVATIDE.TraitPhysical": "Physical",
+  "NOVATIDE.TraitMental": "Mental",
+  "NOVATIDE.TraitMagical": "Magical",
+
+  "NOVATIDE.TraitPhysAbbr": "phys",
+  "NOVATIDE.TraitMentAbbr": "ment",
+  "NOVATIDE.TraitMagiAbbr": "magi",
+
+
+  "NOVATIDE.EffectCreate": "Create Effect",
+  "NOVATIDE.EffectToggle": "Toggle Effect",
+  "NOVATIDE.EffectEdit": "Edit Effect",
+  "NOVATIDE.EffectDelete": "Delete Effect",
+
+  "NOVATIDE.Add": "Add"
+}

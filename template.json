@@ -1,0 +1,16 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "htmlFields": ["biography"],
+    "character": {}
+  },
+  "Item": {
+    "types": ["species", "focus", "career", "ability", "item"],
+    "htmlFields": ["description"],
+    "species": {},
+    "focus": {},
+    "career": {},
+    "ability": {},
+    "item": {}
+  }
+}

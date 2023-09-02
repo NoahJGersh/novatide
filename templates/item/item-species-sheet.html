@@ -1,0 +1,47 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+      <div class="item-header-values">
+        <div class="item-header-value">
+          <label for="basePhys"><b>Physical</b></label>
+          <input name="basePhys" type="text" value="{{system.baseTraits.phys}}"/>
+        </div>
+        <div class="item-header-value">
+          <label for="baseMagi"><b>Magical</b></label>
+          <input name="baseMagi" type="text" value="{{system.baseTraits.magi}}"/>
+        </div>
+        <div class="item-header-value">
+          <label for="baseMent"><b>Mental</b></label>
+          <input name="baseMent" type="text" value="{{system.baseTraits.ment}}"/>
+        </div>
+        <div class="item-header-value">
+          <label for="baseResolve"><b>Resolve</b></label>
+          <input name="baseResolve" type="text" value="{{system.baseTraits.resolve}}"/>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="foci">Foci</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the rollData prop. --}}
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Foci Tab --}}
+    <div class="tab foci" data-group="primary" data-tab="foci">
+      <h2>TODO: Species Foci Information</h2>
+    </div>
+  </section>
+</form>

@@ -1,0 +1,52 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+      <div class="item-header-values">
+        <div class="item-header-value">
+          <label for="system.trait"><b>Focus Trait</b></label>
+          <select name="system.trait">
+            {{selectOptions traits selected=system.trait localize=true}}
+          </select>
+        </div>
+        <div class="item-header-value">
+          <label for="currentTier"><b>Current Tier</b></label>
+          <select name="system.currentTier">
+            {{#each system.tiers as | tier |}}
+            <option value="{{tier.tier}}">{{tier.tier}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="tiers">Tiers</a>
+    <a class="item" data-tab="foci">Foci</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the rollData prop. --}}
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Tiers Tab --}}
+    <div class="tab tiers" data-group="primary" data-tab="tiers">
+      {{!-- As you add new fields, add them in here! --}}
+      <h2>TODO: Tier Information</h2>
+    </div>
+
+    {{!-- Foci Tab --}}
+    <div class="tab foci" data-group="primary" data-tab="foci">
+      <h2>TODO: Species Foci Information</h2>
+    </div>
+  </section>
+</form>
